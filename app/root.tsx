@@ -9,6 +9,15 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import "./styles/base.scss";
+import "./styles/fonts.scss";
+import "./styles/grid.scss";
+import "./styles/reset.scss";
+import "./styles/styles-v2.scss";
+import "./styles/config/font.scss";
+import "./styles/fonts/jetbrains-mono.scss";
+import "./styles/util/adaptive.scss";
+import "./styles/index.scss";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },

@@ -1,13 +1,20 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { ThemeProvider } from '@rescui/ui-contexts';
+import { HeaderSection } from "../components/header-section";
+import { LatestFromKotlinSection } from "../components/latest-from-kotlin-section";
+import { WhyKotlinSection } from "../components/why-kotlin-section";
+import { UsageSection } from "../components/usage-section";
+import { StartSection } from "../components/start-section";
 
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
-}
-
-export default function Home() {
-  return <Welcome />;
+export default function Index() {
+  return (
+    <ThemeProvider theme="dark">
+      <div className="overview-page">
+        <HeaderSection />
+        <LatestFromKotlinSection />
+        <WhyKotlinSection />
+        <UsageSection />
+        <StartSection />
+      </div>
+    </ThemeProvider>
+  );
 }

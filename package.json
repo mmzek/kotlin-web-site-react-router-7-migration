@@ -11,6 +11,12 @@
   "dependencies": {
     "@react-router/node": "7.13.1",
     "@react-router/serve": "7.13.1",
+    "@rescui/button": "^0.23.3",
+    "@rescui/card": "^0.13.10",
+    "@rescui/tab-list": "^0.16.3",
+    "@rescui/typography": "^0.24.3",
+    "@rescui/ui-contexts": "^0.6.0",
+    "highlight.js": "^11.11.1",
     "isbot": "^5.1.36",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",

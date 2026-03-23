@@ -1,0 +1,13 @@
+@use 'sass:color';
+
+$font-family-sans-serif: 'Inter', sans-serif;
+$font-family-mono: 'JetBrains Mono', monospace;
+
+$base-font-size: 16px;
+$base-line-height: 1.5;
+
+$base-color: #000; 
+$base-link-color: #ffffff; 
+$base-link-hover-color: color.adjust($base-link-color, $lightness: -10%);
+
+

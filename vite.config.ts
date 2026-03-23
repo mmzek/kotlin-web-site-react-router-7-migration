@@ -5,4 +5,10 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
+  define: {
+    global: "globalThis",
+  },
+  ssr: {
+    noExternal: [/^@rescui\//, "@jetbrains/kotlin-web-site-ui"]
+  }
 });

@@ -3,11 +3,7 @@ import Button from '@rescui/button';
 import {useTextStyles} from '@rescui/typography';
 import cn from 'classnames';
 
-import {Container, Section} from "../../../components/layout";
-
-import bannerImg from '../../../../../assets/images/index/banners/kotlin-1.6.20.png';
-import bannerMobileImg from '../../../../../assets/images/index/banners/kotlin-1.6.20-mobile.png';
-
+import {Container, Section} from "../layout/index";
 import {newsData} from './data';
 
 import './index.scss';
@@ -28,8 +24,8 @@ export function LatestFromKotlinSection() {
                         className="latest-from-kotlin-section__banner-link"
                     >
                         <picture>
-                            <source media="(max-width: 537px)" srcSet={bannerMobileImg}/>
-                            <img src={bannerImg} alt="Kotlin 1.6.20 released" width="100%"/>
+                            <source media="(max-width: 537px)" srcSet="/images/index/banners/kotlin-1.6.20-mobile.png"/>
+                            <img src="/images/index/banners/kotlin-1.6.20.png" alt="Kotlin 1.6.20 released" width="100%"/>
                         </picture>
                     </a>
                 </div>

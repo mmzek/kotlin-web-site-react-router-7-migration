@@ -7,8 +7,6 @@ import cn from 'classnames';
 
 import {Container, Section} from "../layout";
 
-import multiplatformImg from '../../../../../assets/images/index/multiplatform.svg';
-
 import {ProgrammingLanguage} from './programming-language';
 
 import './index.scss';
@@ -97,7 +95,7 @@ function WhyKotlinContent() {
                             )}
                             {section.media === 'image' && (
                                 <img
-                                    src={multiplatformImg}
+                                    src="/images/index/multiplatform.svg"
                                     alt="Kotlin Multiplatform"
                                     className="why-kotlin-section__image"
                                 />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from '@rescui/button';
 import {useTextStyles} from '@rescui/typography';
 import {cardCn} from '@rescui/card';
@@ -12,8 +12,15 @@ import './index.scss';
 
 export function HeaderSection() {
     const textCn = useTextStyles();
+    const [isMobile, setIsMobile] = useState(false);
 
-    const isMobile = window.innerWidth < 768;
+    useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+    }, []);
+    
     const visibleCards = isMobile ? cardsData.slice(0, 2) : cardsData;
 
     return <div>
@@ -31,7 +38,7 @@ export function HeaderSection() {
                     </div>
 
                     <div className="header-section__contributors">
-                        <img src="../../../../../assets/jetbrains-logo.svg" alt=""></img>
+                        <img src="/jetbrains-logo.svg" alt="JetBrains"></img>
                         <p className={textCn('rs-text-2')}>
                             Developed by <a className={textCn('rs-link')}
                                             href="https://www.jetbrains.com/">JetBrains</a> & Open-source <a

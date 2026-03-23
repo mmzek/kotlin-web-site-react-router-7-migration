@@ -8,16 +8,17 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
-import "./app.css";
 import "./styles/base.scss";
 import "./styles/fonts.scss";
 import "./styles/grid.scss";
 import "./styles/reset.scss";
 import "./styles/styles-v2.scss";
-import "./styles/config/font.scss";
+import "./styles/config/_font.scss";
 import "./styles/fonts/jetbrains-mono.scss";
-import "./styles/util/adaptive.scss";
+import "./styles/util/_adaptive.scss";
 import "./styles/index.scss";
+import { HeaderSection } from "./components/header";
+import { Footer } from "./components/footer";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -51,7 +52,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return <><HeaderSection /><Outlet /><Footer /></>;
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
